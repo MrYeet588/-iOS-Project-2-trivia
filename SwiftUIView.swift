@@ -28,8 +28,6 @@ struct SwiftUIView: View {
                     }
                 }
         }
-
-
 }
 
 #Preview {

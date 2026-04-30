@@ -37,43 +37,7 @@ struct MainMenu: View {
         .ignoresSafeArea()
     }
 
-    private var titleSection: some View {
-        VStack(spacing: 12) {
-            
-
-            Text("TRIVIA")
-                .font(.system(size: 52, weight: .black, design: .rounded))
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: [.white, Color(red: 0.76, green: 0.60, blue: 1.0)],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .tracking(8)
-            Text("Game")
-                .font(.system(size: 72, weight: .black, design: .rounded))
-                .foregroundStyle(
-                    LinearGradient(
-                        colors: [.white, Color(red: 0.76, green: 0.60, blue: 1.0)],
-                        startPoint: .topLeading,
-                        endPoint: .bottomTrailing
-                    )
-                )
-                .scaleEffect(pulseTitle ? 1.08 : 1.0)
-                .animation(
-                    .easeInOut(duration: 1.4).repeatForever(autoreverses: true),
-                    value: pulseTitle
-                )
-                .onAppear { pulseTitle = true }
-
-            Text("Open Trivia DB")
-                .font(.system(size: 13, weight: .medium, design: .monospaced))
-                .foregroundColor(.white.opacity(0.35))
-                .padding(.top, 4)
-        }
-    }
-
+    
     private var buttonStack: some View {
         VStack(spacing: 16) {
             MenuButton(

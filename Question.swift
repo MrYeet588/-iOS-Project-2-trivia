@@ -20,3 +20,8 @@ struct Question: Codable {
         case answer4
     }
 }
+
+struct incorrect: Codable {
+    var id: Int
+    var incorrect: String
+}

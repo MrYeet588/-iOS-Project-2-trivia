@@ -5,6 +5,8 @@
 //  Created by Student on 4/29/26.
 //
 
+import Foundation
+
 struct Question: Codable {
     var type: String
     var difficulty: String
@@ -19,9 +21,4 @@ struct Question: Codable {
         case answer3
         case answer4
     }
-}
-
-struct incorrect: Codable {
-    var id: Int
-    var incorrect: String
 }

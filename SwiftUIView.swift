@@ -8,9 +8,12 @@
 import SwiftUI
 
 struct SwiftUIView: View {
-    @State private var apiData: String = ""
+    @State private var questions: [Question] = []
     
     var body: some View {
+        List {
+            ForEach(
+        }
             Text(apiData)
                 .task {
                     let urlStr: String = "https://opentdb.com/api.php?amount=1"
